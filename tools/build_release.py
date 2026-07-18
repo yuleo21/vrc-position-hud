@@ -1,4 +1,5 @@
 import argparse
+import gzip
 import io
 import re
 import shutil
@@ -35,7 +36,11 @@ def build_unitypackage(root: Path, assets_dir: Path, out_path: Path) -> None:
     seen: dict[str, Path] = {}
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
-    with tarfile.open(out_path, "w:gz") as tar:
+    with (
+        open(out_path, "wb") as raw,
+        gzip.GzipFile(filename="archtemp.tar", mode="wb", fileobj=raw, mtime=0) as gz,
+        tarfile.open(fileobj=gz, mode="w") as tar,
+    ):
         for meta in metas:
             asset = meta.with_suffix("")  # foo.prefab.meta -> foo.prefab
             if not asset.exists():
