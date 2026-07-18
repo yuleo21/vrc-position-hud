@@ -11,7 +11,7 @@ VRChat用シェーダー(`PositionHUD.shader`)と、そこに焼き込まれた�
 
 ### Unity側
 
-1. `PositionHUD_v1.0.0.unitypackage` をUnityプロジェクトにインポート
+1. `PositionHUD_vX.Y.Z.unitypackage` をUnityプロジェクトにインポート
 2. `Assets/njm2360/PositionHUD/Prefab/PositionHUD.prefab` をアバター配下に置く
 
 | プロパティ                 | 意味                                     | デフォルト |
