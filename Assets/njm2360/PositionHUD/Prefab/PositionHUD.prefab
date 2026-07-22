@@ -9,8 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8288419648983002256}
-  - component: {fileID: 5703368721752483722}
-  - component: {fileID: 4316991918261397959}
+  - component: {fileID: 2413169262999037030}
   - component: {fileID: 474235155355662387}
   - component: {fileID: 407976623639482416}
   m_Layer: 0
@@ -36,28 +35,7 @@ Transform:
   - {fileID: 4005263902191118558}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &5703368721752483722
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 292369838555320942}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8c77b196ad957be4d9b291423f14ed7c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4316991918261397959
+--- !u!114 &2413169262999037030
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -66,19 +44,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 292369838555320942}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bb122659f724ebf85fe095ac02dc339, type: 3}
+  m_Script: {fileID: 11500000, guid: 229dd561ca024a6588e388160921a70f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 9100000, guid: 8c77b196ad957be4d9b291423f14ed7c, type: 2}
-  layerType: 5
-  deleteAttachedAnimator: 1
-  pathMode: 0
-  matchAvatarWriteDefaults: 1
-  relativePathRoot:
+  BlendTree: {fileID: 20600000, guid: 5e5d2ff536e95594bbefb83c2ab53d94, type: 2}
+  PathMode: 0
+  RelativePathRoot:
     referencePath: 
     targetObject: {fileID: 0}
-  layerPriority: 0
-  mergeAnimatorMode: 0
 --- !u!114 &474235155355662387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,11 +65,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parameters:
+  - nameOrPrefix: One
+    remapTo: 
+    internalParameter: 0
+    isPrefix: 0
+    syncType: 0
+    localOnly: 0
+    defaultValue: 1
+    saved: 0
+    hasExplicitDefaultValue: 1
+    m_overrideAnimatorDefaults: 0
   - nameOrPrefix: PixelHUDEnable
     remapTo: 
     internalParameter: 0
     isPrefix: 0
-    syncType: 3
+    syncType: 2
     localOnly: 1
     defaultValue: 0
     saved: 0
@@ -106,7 +89,7 @@ MonoBehaviour:
     remapTo: 
     internalParameter: 0
     isPrefix: 0
-    syncType: 3
+    syncType: 2
     localOnly: 1
     defaultValue: 0
     saved: 0
@@ -155,7 +138,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8288419648983002256}
